@@ -14,7 +14,7 @@
 all: slc-screen.pdf slc-print.pdf slc-print-cover.pdf index.html
 
 %.pdf : %.tex olprevision.tex FORCE_MAKE
-	latexmk -pdf -dvi- -ps- $<
+	latexmk -lualatex -dvi- -ps- $<
 
 index.html: README.md  webpage-template.html slc-screen.pdf
 	convert slc-screen.pdf[0] slc.png
@@ -24,4 +24,4 @@ clean:
 	latexmk -c slc-screen.tex slc-print.tex
 
 olprevision.tex: FORCE_MAKE
-	../../misc/makeolprevision ../..
+	OpenLogic/misc/makeolprevision OpenLogic

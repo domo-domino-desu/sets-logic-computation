@@ -1,5 +1,20 @@
 # Sets, Logic, Computation
 
+This fork uses the Chinese translation of the Open Logic Text as the
+`OpenLogic` submodule. Clone it with all nested assets:
+
+```sh
+git clone --recurse-submodules https://github.com/domo-domino-desu/sets-logic-computation.git
+```
+
+To pick up a newer Open Logic translation, update and commit the submodule
+pointer:
+
+```sh
+git submodule update --remote --recursive OpenLogic
+git add OpenLogic
+```
+
 [![Book Cover](https://slc.openlogicproject.org/slc.png)](https://slc.openlogicproject.org/slc-screen.pdf)
 
 _Sets, Logic, Computation_ is an introductory textbook on metalogic.
