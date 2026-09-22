@@ -1,30 +1,5 @@
-Sets of sentences in a sense describe the structures in which they are
-jointly true; these structures are their \emph{models}. Conversely,
-if we start with a structure or set of structures, we might be
-interested in the set of sentences they are models of, this is the
-\emph{theory} of the structure or set of structures. Any such set of
-sentences has the property that every sentence entailed by them is
-already in the set; they are \emph{closed}. More generally, we call a
-set $\Gamma$ a theory if it is closed under entailment, and say
-$\Gamma$ is \emph{axiomatized} by~$\Delta$ is $\Gamma$ consists of all
-sentences entailed by~$\Delta$.
+从某种意义上说，语句集合描述了它们在其中共同为真的结构；这些结构就是它们的\emph{模型}。反过来，如果我们从一个结构或一组结构出发，可能会对以它们为模型的语句集合感兴趣，这个集合就是该结构或该组结构的\emph{理论}。任何这样的语句集合都具有如下性质：被它们所语义后承的每一个语句都已经在该集合中；它们是\emph{封闭的}。更一般地，如果集合 $\Gamma$ 在语义后承下封闭，我们就称 $\Gamma$ 为一个理论；并且，如果 $\Gamma$ 恰好由 $\Delta$ 所语义后承的所有语句组成，我们就说 $\Gamma$ 被~$\Delta$ \emph{公理化}了。
 
-Mathematics yields many examples of theories, e.g., the theories of
-linear orders, of groups, or theories of arithmetic, e.g., the theory
-axiomatized by Peano's axioms. But there are many examples of
-important theories in other disciplines as well, e.g., relational
-databases may be thought of as theories, and metaphysics concerns
-itself with theories of parthood which can be axiomatized.
+数学提供了许多理论的例子，例如线性序理论、群论，或者算术理论——例如由 Peano（皮亚诺）公理公理化的理论。但其他学科中也有许多重要理论的例子，例如，关系数据库可以被看作理论，形而上学则关注可以被公理化的部分论理论。
 
-One significant question when setting up a theory for study is whether
-its language is expressive enough to allow us to formulate everything
-we want the theory to talk about, and another is whether it is strong
-enough to prove what we want it to prove. To \emph{express} a
-relation we need a formula with the requisite number of free
-variables. In \emph{set theory}, we only have $\in$ as a relation
-symbol, but it allows us to express $x \subseteq y$ using
-$\lforall[u][(u \in x \lif u \in y)]$. \emph{Zermelo-Fraenkel set
-  theory}~$\Log{ZFC}$, in fact, is strong enough to both express
-(almost) every mathematical claim and to (almost) prove every
-mathematical theorem using a handful of axioms and a chain of
-increasingly complicated definitions such as that of~$\subseteq$.
+在建立一个理论加以研究时，一个重要问题是它的语言是否具有足够的表达力，让我们能表达希望该理论讨论的一切；另一个问题是它是否足够强，能证明我们希望它证明的结论。要\emph{表达}一个关系，我们需要一个含有相应数量自由变元的公式。在\emph{集合论}中，我们只有 $\in$ 作为谓词符号，但它允许我们用$\lforall[u][(u \in x \lif u \in y)]$来表达 $x \subseteq y$。事实上，\emph{Zermelo-Fraenkel（策梅洛-弗兰克尔）集合论}~$\Log{ZFC}$ 足够强，既能（几乎）表达每一个数学论断，又能（几乎）证明每一个数学定理，而它仅仅使用了少数几条公理和一系列日益复杂的定义，比如~$\subseteq$ 的定义。

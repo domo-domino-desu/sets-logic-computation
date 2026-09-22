@@ -14,7 +14,9 @@
 all: slc-screen.pdf slc-print.pdf slc-print-cover.pdf index.html
 
 %.pdf : %.tex olprevision.tex FORCE_MAKE
+	@if test -s "$(@:.pdf=.glo)"; then makeglossaries "$(@:.pdf=)"; fi
 	latexmk -lualatex -dvi- -ps- $<
+	@if test -s "$(@:.pdf=.glo)"; then makeglossaries "$(@:.pdf=)"; latexmk -lualatex -dvi- -ps- $<; fi
 
 index.html: README.md  webpage-template.html slc-screen.pdf
 	convert slc-screen.pdf[0] slc.png

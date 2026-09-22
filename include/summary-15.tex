@@ -1,27 +1,5 @@
-Turing machines are determined by their instruction sets, which are
-finite sets of quintuples (for every state and symbol read, specify
-new state, symbol written, and movement of the head). The finite sets
-of quintuples are enumerable, so there is a way of associating a
-number with each Turing machine instruction set. The \emph{index} of
-a Turing machine is the number associated with its instruction set
-under a fixed such schema. In this way we can ``talk about'' Turing
-machines indirectly---by talking about their indices.
+图灵机由其指令集决定，指令集是五元组的有限集（即对于每个状态与读入的符号，指定新状态、写出符号以及读写头的移动方式）。五元组的有限集是可数的，因此可以将每个图灵机的指令集与一个数相关联。图灵机的\emph{指标}，就是在固定的此类方案下，与其指令集相关联的数。这样，我们就可以间接地“谈论”图灵机——通过谈论它们的指标。
 
-One important problem about the behavior of Turing machines is whether
-they eventually halt. Let $h(e, n)$ be the function which $= 1$ if the
-Turing machine with index~$e$ halts when started on input~$n$, and
-$=0$ otherwise. It is called the \emph{halting function}. The question
-of whether the halting function is itself Turing computable is called
-the \emph{halting problem}. The answer is no: the halting problem is
-unsolvable. This is established using a diagonal argument.
+关于图灵机行为的一个重要问题是：它们最终是否会停机。令 $h(e, n)$ 为这样一个函数：若指标为~$e$ 的图灵机在输入~$n$ 上启动后停机，则函数值为 $1$，否则为 $0$。该函数称为\emph{停机函数}。停机函数本身是否图灵可计算，这一问题称为\emph{停机问题}。答案是否定的：停机问题是不可解的。这是通过对角线论证确立的。
 
-The halting problem is only one example of a larger class of problems
-of the form ``can $X$ be accomplished using Turing machines.'' Another
-central problem of logic is the \emph{decision problem for first-order
-  logic}: is there a Turing machine that can decide if a given
-sentence is valid or not. This famous problem was also solved
-negatively: the decision problem is unsolvable. This is established by
-a reduction argument: we can associate with each Turing machine~$M$
-and input~$w$ a first-order sentence~$T(M, w) \lif E(M, w)$ which is
-valid iff $M$ halts when started on input~$w$. If the decision problem
-were solvable, we could thus use it to solve the halting problem.
+停机问题仅仅是形如“X能否由图灵机完成”的更广泛的一类问题中的一个例子。逻辑的另一个核心问题是\emph{一阶逻辑的判定问题}：是否存在一台图灵机，能够判定给定语句是否有效。这个著名问题同样得到了否定的解答：判定问题是不可解的。这是通过归约论证确立的：对于每台图灵机~$M$ 和输入~$w$，我们可以关联一个一阶语句~$T(M, w) \lif E(M, w)$，该语句有效当且仅当 $M$ 在输入~$w$ 上启动后停机。如果判定问题是可解的，我们就可以用它来解决停机问题。

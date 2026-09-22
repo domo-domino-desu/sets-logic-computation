@@ -1,496 +1,444 @@
 \newglossaryentry{dtheorem}{
-  name = {deduction theorem},
-  description = {Relates entailment and provability of a sentence from
-    an assumption with that of a corresponding conditional. In the
-    semantic form (\olref[fol][syn][sem]{thm:sem-deduction}), it states
-    that $\Gamma \cup \{!A\} \Entails !B$ iff $\Gamma \Entails !A \lif
-    !B$. In the proof-theoretic form, it states that $\Gamma \cup
+  name = {演绎定理},
+  description = {将基于假设的语句的语义后承和可证性，与对应的条件句的语义后承和可证性联系起来的定理。
+在语义形式中（\olref[fol][syn][sem]{thm:sem-deduction}），它断言 $\Gamma \cup \{!A\} \Entails !B$ 当且仅当 $\Gamma \Entails !A \lif
+    !B$。 In the proof-theoretic form, it states that $\Gamma \cup
    \{!A\} \Proves !B$ iff $\Gamma \Proves !A \lif !B$}}
 
 \newglossaryentry{set-extensionality} {
-  name={extensionality (of sets)},  
-  description={Sets $A$ and~$B$ are identical, $A = B$, iff every
-    element of~$A$ is also an element of~$B$, and vice versa
-    (see \olref[sfr][set][bas]{sec})}}
+  name={外延性（集合的）},
+  description={集合 $A$ 和~$B$ 相等，即 $A = B$，当且仅当~$A$ 的每个
+    元素都是~$B$ 的元素，反之亦然
+    （参见 \olref[sfr][set][bas]{sec}）}}
 
 \newglossaryentry{sat-extensionality}{
-        name = {extensionality (of satisfaction)},
-        description = {Whether or not a formula~$!A$ is satisfied
-        depends only on the assignments to the non-logical symbols and
-        free variables that actually occur in~$!A$}}
+        name = {外延性（满足关系的）},
+        description = {公式~$!A$ 是否被满足，
+        仅取决于实际出现在~$!A$ 中的非逻辑符号和自由变元的赋值}}
 
 \newglossaryentry{set} {
-  name=set,  
-  description={A collection of objects, considered independently of
-    the way it is specified, of the order of the objects in the set,
-    and of their multiplicity (see \olref[sfr][set][bas]{sec})} }
+  name=集合,
+  description={对象的汇集，独立于其指定方式、集合中对象的顺序
+    以及对象的多重性（参见 \olref[sfr][set][bas]{sec}）} }
 
 \newglossaryentry{symmetric} {
-  name=symmetric,  
-  description={$R$ is symmetric iff, whenever $Rxy$ then also $Ryx$
-    (see \olref[sfr][rel][prp]{sec})} }
+  name=对称的,
+  description={关系 $R$ 是对称的，当且仅当只要 $Rxy$ 成立，就有 $Ryx$ 成立
+    （参见 \olref[sfr][rel][prp]{sec}）} }
 
 \newglossaryentry{cp} {
-  name=Cartesian product,
-  symbol = {\ensuremath{A \times B}},  
-  description={Set of all pairs of {elements} of $A$ and $B$; $A
+  name=笛卡尔积,
+  symbol = {\ensuremath{A \times B}},
+  description={所有由 $A$ 和 $B$ 的{元素}组成的有序对的集合；$A
     \times B = \Setabs{\tuple{x, y}}{x \in A \text{ and } y \in B}$
-    (see \olref[sfr][set][pai]{sec})} }
+    （参见 \olref[sfr][set][pai]{sec}）} }
 
 \newglossaryentry{subset} {
-  name=subset,
+  name=子集,
   symbol = {\ensuremath{A \subseteq B}},
-  description = {A set every {element} of which is an {element} of
-    a given set~$B$ (see \olref[sfr][set][sub]{sec})}  }
+  description = {一个集合，其每个{元素}都是某个给定集合~$B$ 的{元素}
+    （参见 \olref[sfr][set][sub]{sec}）}  }
 
 \newglossaryentry{finsequence} {
-  name = {sequence (finite)},
+  name = {序列（有限的）},
   symbol = {\ensuremath{A^*}},
-  description = {A finite string of {element}s of~$A$; an
-    {element} of $A^n$ for some $n$ (see
-    \olref[sfr][set][imp]{sec})}}
+  description = {由~$A$ 的{元素}组成的有穷字符串；是某个 $n$ 对应的 $A^n$ 的
+    {元素}（参见
+    \olref[sfr][set][imp]{sec}）}}
 
 \newglossaryentry{infsequence} {
-  name = {sequence (infinite) },
+  name = {序列（无穷的） },
   symbol = {\ensuremath{A^\omega}},
-  description = {A gapless, unending sequence of {element}s of~$A$;
-    formally, a function $s\colon \PosInt \to A$ (see
-    \olref[sfr][set][imp]{sec})}}
+  description = {一个没有间隙、永不终止的、由~$A$ 的{元素}组成的序列；
+    形式上，是一个函数 $s\colon \PosInt \to A$（参见
+    \olref[sfr][set][imp]{sec}）}}
 
 \newglossaryentry{ps} {
-  name=power set,
-  symbol = {\ensuremath{\Pow{A}}},  
-  description={The set consisting of all \glspl{subset} of a set~$A$,
-    $\Pow{A} = \Setabs{x}{x \subseteq A}$ (see
-    \olref[sfr][set][sub]{sec})} }
+  name=幂集,
+  symbol = {\ensuremath{\Pow{A}}},
+  description={由一个集合~$A$ 的所有\glspl{subset}组成的集合，
+    $\Pow{A} = \Setabs{x}{x \subseteq A}$（参见
+    \olref[sfr][set][sub]{sec}）} }
 
 \newglossaryentry{union} {
-  name=union,
+  name=并集,
   symbol = {\ensuremath{A \cup B}},
-  description={The set of all {element}s of $A$ and $B$ together: $A
-    \cup B = \Setabs{x}{x \in A \lor x\in B}$ (see
-    \olref[sfr][set][uni]{sec})} }
+  description={所有属于 $A$ 和 $B$ 的{元素}放在一起构成的集合：$A
+    \cup B = \Setabs{x}{x \in A \lor x\in B}$（参见
+    \olref[sfr][set][uni]{sec}）} }
 
 \newglossaryentry{intersection} {
-  name=intersection,
+  name=交集,
   symbol = {\ensuremath{A \cap B}},
-  description={The set of all things which are {element}s of both
-    $A$ and~$B$: $A \cap B = \Setabs{x}{x \in A \land x\in B}$ (see
-    \olref[sfr][set][uni]{sec})} }
+  description={所有同时是 $A$ 和~$B$ 的{元素}的事物的集合：$A \cap B = \Setabs{x}{x \in A \land x\in B}$（参见
+    \olref[sfr][set][uni]{sec}）} }
 
 \newglossaryentry{difference} {
-  name=difference,
+  name=差集,
   symbol = {\ensuremath{A \setminus B}},
-  description={the set of all {elements} of $A$ which are not also
-  {element}s of~$B$: $A \setminus B = \Setabs{x}{x \in A \text{ and }
-    x \notin B}$ (see \olref[sfr][set][uni]{sec})} }
+  description={所有属于 $A$ 但不属于~$B$ 的{元素}的集合：$A \setminus B = \Setabs{x}{x \in A \text{ and }
+    x \notin B}$（参见 \olref[sfr][set][uni]{sec}）} }
 
 \newglossaryentry{disjoint}{
-  name=disjoint, 
-  description={two sets with no {element}s in common (see
-    \olref[sfr][set][uni]{sec})}}
+  name=不相交,
+  description={没有公共{元素}的两个集合（参见
+    \olref[sfr][set][uni]{sec}）}}
 
 \newglossaryentry{composition} {
-  name=composition,
-  symbol = {\ensuremath{g \circ f}},  
-  description={The function resulting from ``chaining together'' $f$
-    and $g$; $(g \circ f)(x) = g(f(x))$ (see
-    \olref[sfr][fun][cmp]{sec})} }
+  name=复合,
+  symbol = {\ensuremath{g \circ f}},
+  description={通过将 $f$ 和 $g$“链接”起来得到的函数；
+    $(g \circ f)(x) = g(f(x))$（参见
+    \olref[sfr][fun][cmp]{sec}）} }
 
 \newglossaryentry{function} {
-  name=function,
+  name=函数,
   symbol = {\ensuremath{f \colon A \to B}},
-  description={A mapping of each element of a \gls{fdomain}~$A$ to an
-    element of the codomain~$B$ (see \olref[sfr][fun][bas]{sec})} }
+  description={将\gls{fdomain}~$A$ 的每个元素映射到陪域~$B$ 的一个元素
+    （参见 \olref[sfr][fun][bas]{sec}）} }
 
 \newglossaryentry{fdomain} {
-  name = {domain (of a function)},
+  name = {定义域（函数的）},
   symbol = {\ensuremath{\dom{f}}},
-  description = {The set of objects for which a (partial) function is
-    defined (see \olref[sfr][fun][bas]{sec})}}
+  description = {一个（偏）函数有定义的对象所组成的集合
+    （参见 \olref[sfr][fun][bas]{sec}）}}
 
 \newglossaryentry{range}{
-  name = range,
+  name = 值域,
   symbol = {\ensuremath{\ran{f}}},
-  description = {the subset of the codomain that is actually output by
-    $f$; $\ran{f} = \Setabs{y \in B}{f(x) = y \text{ for some $x \in
-        A$}}$ (see \olref[sfr][fun][bas]{sec})}}
+  description = {陪域中实际被 $f$ 输出的那些元素构成的子集；$\ran{f} = \Setabs{y \in B}{f(x) = y \text{ for some $x \in
+        A$}}$（参见 \olref[sfr][fun][bas]{sec})}}
 
 \newglossaryentry{graph} {
-  name=graph (of a function),
-  description={the relation $R_f \subseteq A \times B$ defined by $R_f
-    = \Setabs{\tuple{x,y}}{f(x) = y}$, if $f\colon A \pto B$ (see
-    \olref[sfr][fun][rel]{sec})} }
+  name=图像（函数的）,
+  description={由 $R_f
+    = \Setabs{\tuple{x,y}}{f(x) = y}$ 定义的关系 $R_f \subseteq A \times B$，其中 $f\colon A \pto B$（参见
+    \olref[sfr][fun][rel]{sec}）} }
 
 \newglossaryentry{inverse} {
-  name=inverse function,
-  description={If $f\colon A \to B$ is a \gls{bijection}, $f^{-1} \colon
-    B \to A$ is the function with $f^-1(y) =$ whatever unique $x \in
-    A$ is such that $f(x) = y$ (see \olref[sfr][fun][inv]{sec})} }
+  name=逆函数,
+  description={若 $f\colon A \to B$ 是一个\gls{bijection}，则 $f^{-1} \colon
+    B \to A$ 是一个函数，满足 $f^{-1}(y) =$ 使得 $f(x) = y$ 成立的那个唯一 $x \in
+    A$（参见 \olref[sfr][fun][inv]{sec}）} }
 
 \newglossaryentry{pf} {
-  name=partial function,
+  name=偏函数,
     symbol = {\ensuremath{f \colon A \pto B}},
-  description={A partial function is a mapping which assigns to every
-    {element} of~$A$ at most one {element} of~$B$. If $f$ assigns
-    an element of~$B$ to $x \in A$, $f(x)$ is defined, and otherwise
-    undefined (see \olref[sfr][fun][par]{sec})} }
+  description={偏函数是一个映射，它给~$A$ 的每个{元素}至多指派一个~$B$ 的{元素}。如果 $f$ 将 $B$ 中的一个元素指派给 $x \in A$，则 $f(x)$ 是有定义的，否则是无定义的（参见 \olref[sfr][fun][par]{sec}）} }
 
 \newglossaryentry{tc} {
-  name=transitive closure,
+  name=传递闭包,
   symbol = {\ensuremath{R^+}},
-  description={the smallest \gls{transitive} relation containing~$R$
-    (see \olref[sfr][rel][ops]{sec})} }
+  description={包含~$R$ 的最小\gls{transitive}关系（参见 \olref[sfr][rel][ops]{sec}）} }
 
 \newglossaryentry{ir} {
-  name=inverse relation,
+  name=逆关系,
   symbol = {\ensuremath{R^{-1}}},  
-  description={The relation $R$ ``turned around''; $R^{-1} =
-    \Setabs{\tuple{y, x}}{\tuple{x, y} \in R}$ (see
-    \olref[sfr][rel][ops]{sec})} }
+  description={将关系 $R$ “反过来”；$R^{-1} =
+    \Setabs{\tuple{y, x}}{\tuple{x, y} \in R}$（参见
+    \olref[sfr][rel][ops]{sec}）} }
 
 \newglossaryentry{preorder} {
-  name=preorder,
-  description={A \gls{reflexive} and \gls{transitive} relation (see
-    \olref[sfr][rel][ord]{sec})} }
+  name=预序,
+  description={一个\gls{reflexive}且\gls{transitive}的关系（参见
+    \olref[sfr][rel][ord]{sec}）} }
 
 \newglossaryentry{po} {
-  name=partial order,
-  description={A \gls{reflexive}, \gls{anti-symmetric},
-    \gls{transitive} relation (see \olref[sfr][rel][ord]{sec})} }
+  name=偏序,
+  description={一个\gls{reflexive}、\gls{anti-symmetric}、
+    \gls{transitive}的关系（参见 \olref[sfr][rel][ord]{sec}）} }
 
 \newglossaryentry{to} {
-  name=total order,
-  description={see \gls{lo}}}
+  name=全序,
+  description={参见 \gls{lo}}}
 
 \newglossaryentry{irreflexive} {
-  name=irreflexive,
-  description={$R$ is irreflexive if, for no $x \in A$, $Rxx$ (see
-    \olref[sfr][rel][ord]{sec})} }
+  name=反自反的,
+  description={关系 $R$ 是反自反的，如果没有 $x \in A$ 使得 $Rxx$ 成立（参见
+    \olref[sfr][rel][ord]{sec}）} }
 
 \newglossaryentry{asymmetric} {
-  name=asymmetric,
-  description={$R$ is asymmetric if for no pair $x,y\in A$ we have
-    $Rxy$ and $Ryx$ (see \olref[sfr][rel][ord]{sec})} }
+  name=非对称的,
+  description={关系 $R$ 是非对称的，如果没有元素对 $x,y\in A$ 使得我们既有
+    $Rxy$ 又有 $Ryx$（参见 \olref[sfr][rel][ord]{sec}）} }
 
 \newglossaryentry{so} {
-  name=strict order,
-  description={An \gls{irreflexive}, \gls{asymmetric}, and
-    \gls{transitive} relation (see \olref[sfr][rel][ord]{sec})} }
+  name=严格序,
+  description={一个\gls{irreflexive}、\gls{asymmetric}且
+    \gls{transitive}的关系（参见 \olref[sfr][rel][ord]{sec}）} }
 
 \newglossaryentry{slo} {
-  name=strict linear order,
-  description={A connected \gls{so} (see
-    \olref[sfr][rel][ord]{sec})} }
+  name=严格线性序,
+  description={一个\gls{connected}的\gls{so}（参见
+    \olref[sfr][rel][ord]{sec}）} }
 
 \newglossaryentry{lo} {
-  name=linear order,
-  description={A connected \gls{po} (see
-    \olref[sfr][rel][ord]{sec})} }
+  name=线性序,
+  description={一个\gls{connected}的\gls{po}（参见
+    \olref[sfr][rel][ord]{sec}）} }
 
 \newglossaryentry{br} {
-  name=binary relation,
-  description={A subset of~$A^{2}$; we write $Rxy$ (or $xRy$) for
-    $\tuple{x, y} \in R$ (see \olref[sfr][rel][set]{sec})} }
+  name=二元关系,
+  description={集合~$A^{2}$ 的一个子集；我们用 $Rxy$（或 $xRy$）表示
+    $\tuple{x, y} \in R$（参见 \olref[sfr][rel][set]{sec}）} }
 
 \newglossaryentry{reflexive} {
-  name=reflexive,
-  description={$R$ is reflexive iff, for every $x \in A$, $Rxx$ (see
-    \olref[sfr][rel][prp]{sec})} }
+  name=自反的,
+  description={关系 $R$ 是自反的，当且仅当对每个 $x \in A$，有 $Rxx$（参见
+    \olref[sfr][rel][prp]{sec}）} }
 
 \newglossaryentry{transitive} {
-  name=transitive,
-  description={$R$ is transitive iff, whenever $Rxy$ and $Ryz$, then
-    also $Rxz$ (see \olref[sfr][rel][prp]{sec})} }
+  name=传递的,
+  description={关系 $R$ 是传递的，当且仅当只要 $Rxy$ 且 $Ryz$，则
+    必有 $Rxz$（参见 \olref[sfr][rel][prp]{sec}）} }
 
 \newglossaryentry{anti-symmetric} {
-  name=anti-symmetric,
-  description={$R$ is anti-symmetric iff, whenever both $Rxy$ and
-    $Ryx$, then $x=y$; in other words: if $x\neq y$ then not $Rxy$ or
-    not $Ryx$ (see \olref[sfr][rel][prp]{sec})} }
+  name=反对称的,
+  description={关系 $R$ 是反对称的，当且仅当只要同时有 $Rxy$ 和
+    $Ryx$，则 $x=y$；换言之：若 $x\neq y$，则或者没有 $Rxy$，或者没有 $Ryx$（参见 \olref[sfr][rel][prp]{sec}）} }
 
 \newglossaryentry{connected} {
-  name=connected,
-  description={$R$ is connected if for all $x, y\in A$
-    with $x \neq y$, then either $Rxy$ or~$Ryx$ (see
-    \olref[sfr][rel][prp]{sec})} }
+  name=连通的,
+  description={关系 $R$ 是连通的，如果对所有 $x, y\in A$，
+    只要 $x \neq y$，则要么 $Rxy$，要么~$Ryx$（参见
+    \olref[sfr][rel][prp]{sec}）} }
 
 \newglossaryentry{er} {
-  name={equivalence relation}, 
-  description={a reflexive, symmetric, and transitive relation (see
-    \olref[sfr][rel][prp]{sec})} }
+  name={等价关系}, 
+  description={一个自反、对称且传递的关系（参见
+    \olref[sfr][rel][prp]{sec}）} }
 
 \newglossaryentry{sf} {
-  name={surjective},
-  description={$f \colon A \to B$ is {surjective} iff the
-    range of~$f$ is all of~$B$, i.e., for every $y \in B$ there is at
-    least one $x \in A$ such that~$f(x) = y$ (see
-    \olref[sfr][fun][kin]{sec})} }
+  name={满射的},
+  description={$f \colon A \to B$ 是满射的当且仅当~$f$ 的
+    值域就是整个~$B$，即，对每个 $y \in B$ 至少存在一个 $x \in A$ 使得~$f(x) = y$（参见
+    \olref[sfr][fun][kin]{sec}）} }
 
 \newglossaryentry{if} {
-  name={injective}, 
-  description={$f \colon A \to B$ is {injective} iff for
-    each $y \in B$ there is at most one $x \in A$ such that~$f(x) =
-    y$; equivalently if whenever $x \neq x'$ then $f(x) \neq f(x')$
-    (see \olref[sfr][fun][kin]{sec})} }
+  name={单射的}, 
+  description={$f \colon A \to B$ 是单射的当且仅当对
+    每个 $y \in B$，至多存在一个 $x \in A$ 使得~$f(x) =
+    y$；等价地说，若 $x \neq x'$ 则 $f(x) \neq f(x')$
+    （参见 \olref[sfr][fun][kin]{sec}）} }
 
 \newglossaryentry{bijection} {
-  name={bijection},  
-  description={A function that is both {surjective} and
-    {injective} (see \olref[sfr][fun][kin]{sec})} }
+  name={双射},  
+  description={一个既是满射又是单射的函数（参见 \olref[sfr][fun][kin]{sec}）} }
 
 \newglossaryentry{enumeration} {
-  name=enumeration,  
-  description={A possibly infinite list of all
-    {element}s of a set~$A$; formally a surjective function
-    $f\colon \Nat \to A$ (see \olref[sfr][siz][enm]{sec})} }
+  name=枚举,  
+  description={一个集合~$A$ 的所有\gls{element}的可能无限的列表；形式化地说，是一个满射函数
+    $f\colon \Nat \to A$（参见 \olref[sfr][siz][enm]{sec}）} }
 
 \newglossaryentry{equinumerous} {
-  name=equinumerous,
-  description={$A$ and $B$ are equinumerous iff there is a total
-    bijection from $A$ to $B$ (see \olref[sfr][siz][equ]{sec})} }
+  name=等势的,
+  description={$A$ 和 $B$ 是等势的当且仅当存在一个从 $A$ 到 $B$ 的全
+    双射（参见 \olref[sfr][siz][equ]{sec}）} }
 
 \newglossaryentry{finitely satisfiable} {
-  name={finitely satisfiable},  
-  description={$\Gamma$ is finitely satisfiable iff every finite
-    $\Gamma_0 \subseteq \Gamma$ is satisfiable (see
-    \olref[fol][com][com]{sec})} }
+  name={有限可满足的},  
+  description={$\Gamma$ 是有限可满足的当且仅当每个有限
+    $\Gamma_0 \subseteq \Gamma$ 都是可满足的（参见
+    \olref[fol][com][com]{sec}）} }
 
 \newglossaryentry{mcs} {
-  name=complete consistent set,
-  description={A set of {sentence}s is complete and consistent iff it
-    is consistent, and for every {sentence}~$!A$ either $!A$ or
-    $\lnot !A$ is in the set (see \olref[fol][com][ccs]{sec})} }
+  name=完备一致集,
+  description={一个\gls{sentence}集合是完备且一致的，当且仅当它
+    是一致的，并且对每个\gls{sentence}~$!A$，要么 $!A$ 要么
+    $\lnot !A$ 在集合中（参见 \olref[fol][com][ccs]{sec}）} }
 
 \newglossaryentry{mos} {
-  name=model,  
-  description={A {structure} in which every {sentence}
-    in~$\Gamma$ is true is a model of~$\Gamma$ (see
-    \olref[fol][mat][exs]{sec})} }
+  name=模型,  
+  description={一个在其中每个\gls{sentence}
+    ~$\Gamma$ 中的语句都为真的\gls{structure}就是~$\Gamma$ 的模型（参见
+    \olref[fol][mat][exs]{sec}）} }
 
 \newglossaryentry{closed} {
-  name=closed, 
-  description={A set of {sentence}s~$\Gamma$ is closed iff, whenever
-    $\Gamma \Entails !A$ then $!A \in \Gamma$. The set
-    $\Setabs{!A}{\Gamma \Entails !A}$ is the closure of~$\Gamma$ (see
-    \olref[fol][mat][int]{sec})} }
+  name=封闭的, 
+  description={一个\gls{sentence}集合~$\Gamma$ 是封闭的，当且仅当只要
+    $\Gamma \Entails !A$ 则 $!A \in \Gamma$。集合
+    $\Setabs{!A}{\Gamma \Entails !A}$ 是~$\Gamma$ 的闭包（参见
+    \olref[fol][mat][int]{sec}）} }
 
 \newglossaryentry{derivability} {
   name=derivability,
-  symbol = {\ensuremath{\Gamma \Proves !A}},  
-  description={In the sequent calculus, $!A$ is {derivable} from~$\Gamma$ if there is a
-    \gls{derivation} of a \gls{sequent} $\Gamma_0 \Sequent !A$ 
-    where $\Gamma_0 \subseteq \Gamma$ is a finite sequence of sentences in~$\Gamma$ (see
-    \olref[fol][seq][ptn]{sec}). In natural deduction, $!A$ is {derivable} from~$\Gamma$ if there is a
-    {derivation} with end-{formula}~$!A$ and in which every
-    assumption is either {discharged} or is in~$\Gamma$ (see
-    \olref[fol][ntd][ptn]{sec})} }
+  symbol = {\ensuremath{\Gamma \Proves !A}},
+  description={在相继式演算中，如果存在一个\gls{sequent} $\Gamma_0 \Sequent !A$ 的\gls{derivation}，其中 $\Gamma_0 \subseteq \Gamma$ 是~$\Gamma$ 中语句的有穷序列，则称 $!A$ 从~$\Gamma$ 是{可推导的}（参见
+    \olref[fol][seq][ptn]{sec}）。
+在自然演绎中，如果存在一个以 $!A$ 为结束\gls{formula}、并且其中每个假设要么被{解除}要么属于~$\Gamma$ 的{推导}，则称 $!A$ 从~$\Gamma$ 是{可推导的}（参见
+    \olref[fol][ntd][ptn]{sec}）} }
 
 \newglossaryentry{theorem} {
   name={theorem},
   symbol = {\ensuremath{\Proves !A}},
-  description={In the sequent calculus, a {formula}~$!A$ is a theorem
-    (of logic) if there is a {derivation} of the sequent $\Sequent !A$
-    (see \olref[fol][seq][ptn]{sec}).  In natural deduction, a
-    {formula}~$!A$ is a theorem if there is a {derivation} of $!A$
-    with all assumptions \gls{discharged}
-    (see \olref[fol][ntd][ptn]{sec}). We also say that $!A$ is a
-    theorem of a theory~$\Gamma$ if $\Gamma \Proves !A$} }
+  description={在相继式演算中，如果存在相继式 $\Sequent !A$ 的{推导}，则称{公式}~$!A$ 是（逻辑的）{定理}（参见 \olref[fol][seq][ptn]{sec}）。
+在自然演绎中，如果存在一个所有假设均被\gls{discharged}的 $!A$ 的{推导}，则称{公式}~$!A$ 是{定理}（参见 \olref[fol][ntd][ptn]{sec}）。
+我们也称 $!A$ 是理论~$\Gamma$ 的定理，如果 $\Gamma \Proves !A$} }
 
 \newglossaryentry{consistent} {
   name=consistent,
-  description={In the sequent calculus, a set of sentences~$\Gamma$ is
-    consistent iff there is no \gls{derivation} of a \gls{sequent}
-    $\Gamma_0 \Sequent \quad$ with $\Gamma_0 \subseteq \Gamma$
-    (see \olref[fol][seq][ptn]{sec}). In natural deduction, $\Gamma$
-    is consistent iff $\Gamma \Proves/ \lfalse$
-    (see \olref[fol][ntd][ptn]{sec}). If $\Gamma$ is not consistent,
-    it is inconsistent.} }
+  description={在相继式演算中，语句集~$\Gamma$ 是{一致的}，当且仅当不存在以 $\Gamma_0 \subseteq \Gamma$ 为前提的\gls{sequent} $\Gamma_0 \Sequent \quad$ 的\gls{derivation}（参见 \olref[fol][seq][ptn]{sec}）。
+在自然演绎中，$\Gamma$ 是{一致的}，当且仅当 $\Gamma \Proves/ \lfalse$（参见 \olref[fol][ntd][ptn]{sec}）。
+如果 $\Gamma$ 不是一致的，则它是{不一致的}。} }
 
 \newglossaryentry{inconsistent} {
   name=inconsistent,
-  description = {see \gls{consistent}}}
+  description = {参见\gls{consistent}}}
 
 \newglossaryentry{derivation} {
-  name=derivation,  
-  description={In the sequent calculus, a tree of sequents in which every sequent is either an initial sequent or follows from the sequents immediately above it by a rule of
-    inference (see \olref[fol][seq][rul]{sec}). In natural deduction, a tree of formulas in which every formula is either an
-    assumption or follows from the formulas immediately above it by a rule of
-    inference (see \olref[fol][ntd][rul]{sec})} }
+  name=derivation,
+  description={在相继式演算中，指一个相继式的树，其中每个相继式或者是初始相继式，或者由紧接其上方的相继式通过某条推理规则得到（参见 \olref[fol][seq][rul]{sec}）。
+在自然演绎中，指一个公式的树，其中每个公式或者是假设，或者由紧接其上方的公式通过某条推理规则得到（参见 \olref[fol][ntd][rul]{sec}）} }
 
 \newglossaryentry{eigenvariable}{
-  name = eigenvariable,  
-  description = {In the sequent calculus, a special constant symbol in a premise of a
-    $\LeftR{\lexists}$ or $\RightR{\lforall}$ inference which may not
-    appear in the conclusion (see
-    \olref[fol][seq][rul]{sec}). In natural deduction, a special constant symbol in a premise of a
-    $\Elim{\lexists}$ or $\Intro{\lforall}$ inference which may not
-    appear in the conclusion or any \gls{undischarged} assumption (see
-    \olref[fol][ntd][rul]{sec})}}
+  name = eigenvariable,
+  description = {在相继式演算中，指 $\LeftR{\lexists}$ 或 $\RightR{\lforall}$ 推理的前提中出现、但不得在结论中出现的一个特殊常项符号（参见
+    \olref[fol][seq][rul]{sec}）。
+在自然演绎中，指 $\Elim{\lexists}$ 或 $\Intro{\lforall}$ 推理的前提中出现、但不得在结论或任何\gls{undischarged}假设中出现的一个特殊常项符号（参见
+    \olref[fol][ntd][rul]{sec}）}}
 
 \newglossaryentry{discharged}{
   name = {discharged},
-  description = {An \gls{assumption} in !!a{derivation} may be discharged
-    by an inference rule below it (the rule and the assumption are
-    then assigned a matching label, e.g., $[!A]^2$). If it is not
-    discharged, it is called undischarged (see \olref[fol][ntd][rul]{sec})}}
+  description = {推导中的一个\gls{assumption}可以被其下方的某条推理规则{解除}（该规则与该假设会分配一个匹配的标签，例如 $[!A]^2$）。
+如果它未被解除，则称为{未解除的}（参见 \olref[fol][ntd][rul]{sec}）}}
 
 \newglossaryentry{undischarged}{
   name = {undischarged},
-  description = {see \gls{discharged}}}
+  description = {参见\gls{discharged}}}
 
 \newglossaryentry{assumption}{
   name = {assumption},
-  description = {A formula that stands topmost in !!a{derivation}, also
-    called an initial formula. It may be \gls{discharged} or
-    undischarged (see \olref[fol][ntd][rul]{sec})}}
+  description = {位于推导最顶端的公式，也称为初始公式。它可以是\gls{discharged}或未解除的（参见\olref[fol][ntd][rul]{sec}）}}
 
 \newglossaryentry{soundness} {
-  name=soundness, 
-  description={Property of !!a{derivation} system: it is sound if whenever
-    $\Gamma \Proves !A$ then $\Gamma \Entails !A$ (see
-    \olref[fol][seq][sou]{sec} and \olref[fol][ntd][sou]{sec})} }
+  name=soundness,
+  description={推导系统的性质：若每当
+    $\Gamma \Proves !A$ 时都有 $\Gamma \Entails !A$，则它是可靠的（参见
+    \olref[fol][seq][sou]{sec} 和 \olref[fol][ntd][sou]{sec}）} }
 
 \newglossaryentry{sequent}{
-  name=sequent,
-  description = {An expression of the form $\Gamma \Sequent \Delta$ where $\Gamma$ and $\Delta$ are finite sequences of sentences (see \olref[fol][seq][rul]{sec})} }
-
+  name=矢列,
+  description = {形如 $\Gamma \Sequent \Delta$ 的表达式，其中 $\Gamma$ 和 $\Delta$ 是语句的有限序列（参见 \olref[fol][seq][rul]{sec}）} }
 
 \newglossaryentry{sentence} {
-  name=sentence,  
-  description={A {formula} with no \gls{free} variable. (see
-    \olref[fol][syn][fvs]{sec})} }
+  name=语句,
+  description={不含\gls{free}变元的{formula}（参见
+    \olref[fol][syn][fvs]{sec}）} }
 
 \newglossaryentry{variable assignment} {
-  name=variable assignment,  
-  description={A \gls{function} which maps each {variable} to an element
-    of~$\Domain M$ (see \olref[fol][syn][sat]{sec})} }
+  name=变元指派,
+  description={将每个{变量}映射到~$\Domain M$ 中一个元素的 \gls{function}（参见 \olref[fol][syn][sat]{sec}）} }
 
 \newglossaryentry{$x$-variant} {
-  name=$x$-variant,
+  name=$x$-变体,
   sort={x-variant},
-  description={Two \glspl{variable assignment} are $x$-variants, $s \sim_x
-    s'$, if they differ at most in what they assign to~$x$ (see
-    \olref[fol][syn][sat]{sec})} }
+  description={若两个\glspl{variable assignment}至多在赋予~$x$ 的值上不同，则称它们是 $x$-变体，记作 $s \sim_x
+    s'$（参见
+    \olref[fol][syn][sat]{sec}）} }
 
 \newglossaryentry{valid} {
-  name=valid,
+  name=有效,
   symbol = {\ensuremath{\Entails !A}},
-  description={A sentence $!A$ is \emph{valid}  iff
-    $\Sat{M}{!A}$ for every \gls{structure}~$\Struct M$ (see
-    \olref[fol][syn][sem]{sec})} }
+  description={一个语句 $!A$ 是\emph{有效的}，当且仅当
+    对每个 \gls{structure}~$\Struct M$ 都有 $\Sat{M}{!A}$（参见
+    \olref[fol][syn][sem]{sec}）} }
 
 \newglossaryentry{entailment} {
-  name=entailment,
+  name=语义后承,
   symbol = {\ensuremath{\Gamma \Entails !A}},
-  description={A set of sentences~$\Gamma$ entails a
-    sentence~$!A$ iff for every
-    \gls{structure}~$\Struct M$ with $\Sat{M}{\Gamma}$, $\Sat{M}{!A}$
-    (see \olref[fol][syn][sem]{sec})} }
+  description={一组语句~$\Gamma$ \emph{语义后承}一个
+    语句~$!A$，当且仅当对每个满足 $\Sat{M}{\Gamma}$ 的
+    \gls{structure}~$\Struct M$，都有 $\Sat{M}{!A}$
+    （参见 \olref[fol][syn][sem]{sec}）} }
 
 \newglossaryentry{satisfiable} {
-  name=satisfiable,
-  description={A set of sentences~$\Gamma$ is satisfiable if
-    $\Sat{M}{\Gamma}$ for some \gls{structure}~$\Struct M$, otherwise it
-    is unsatisfiable (see \olref[fol][syn][sem]{sec})} }
+  name=可满足,
+  description={一组语句~$\Gamma$ 是\emph{可满足的}，若
+    存在 \gls{structure}~$\Struct M$ 使得 $\Sat{M}{\Gamma}$，否则它是
+    不可满足的（参见 \olref[fol][syn][sem]{sec}）} }
 
 \newglossaryentry{cs} {
-    name=covered,    
-    description={A \gls{structure} in which every element of the
-      domain is the {value} of some closed term (see
-      \olref[fol][syn][str]{sec})} }
+    name=覆盖结构,
+    description={一个 \gls{structure}，其论域中每个元素都是某个闭{term}的{value}（参见
+      \olref[fol][syn][str]{sec}）} }
 
 \newglossaryentry{subformula} {
-  name={subformula},  
-  description={Part of a formula which is itself a formula (see
-    \olref[fol][syn][sbf]{sec})} }
+  name={子公式},
+  description={公式的一部分，且本身是一个公式（参见
+    \olref[fol][syn][sbf]{sec}）} }
 
 \newglossaryentry{free for} {
-  name=free for,
-  description={A term~$t$ is {free for} $x$ in $!A$ if none
-    of the \gls{free} occurrences of~$x$ in $!A$ occur in the scope of a
-    quantifier that binds a variable in~$t$ (see
-    \olref[fol][syn][sub]{sec})} }
+  name=对……自由,
+  description={项~$t$ \emph{对} $x$ \emph{自由}于 $!A$ 中，如果在 $!A$ 中~$x$ 的所有
+    \gls{free} 出现都不在能够绑定~$t$ 中变元的量词的辖域内（参见
+    \olref[fol][syn][sub]{sec}）} }
 
 \newglossaryentry{church-turing thesis} {
-  name=Church-Turing Thesis,
-  description={states that anything computable via an effective
-    procedure is Turing computable (see \olref[tur][mac][ctt]{sec})} }
+  name=Church-Turing（邱奇-图灵）论题,
+  description={断言：凡是通过有效程序可计算的，都是 Turing（图灵）可计算的（参见 \olref[tur][mac][ctt]{sec}）} }
 
 \newglossaryentry{completeness} {
-  name=completeness, 
-  description={Property of !!a{derivation} system; it is complete if, whenever
-    $\Gamma$ entails $!A$, then there is also a {derivation} that
-    establishes $\Gamma \Proves !A$; equivalently, iff
-    every \gls{consistent} set of sentences is \gls{satisfiable}
-    (see \olref[fol][com][int]{sec})} }
+  name=完备性,
+  description={推导系统的性质；若每当
+    $\Gamma$ 语义上后承 $!A$ 时，都存在一个{derivation}可建立 $\Gamma \Proves !A$，则该系统是完备的；等价地说，当且仅当
+    每个 \gls{consistent} 语句集都是 \gls{satisfiable} 的
+    （参见 \olref[fol][com][int]{sec}）} }
 
 \newglossaryentry{formula} {
-  name={formula},  
-  description={Expressions of a first-order language~$\Lang L$ which
-    express relations or properties, or are true or false (see
-    \olref[fol][syn][frm]{sec})} }
+  name={公式},
+  description={一阶语言~$\Lang L$ 中表达关系或性质，或具有真假的表达式（参见
+    \olref[fol][syn][frm]{sec}）} }
 
 \newglossaryentry{structure} {
-  name={structure},
+  name={结构},
   symbol = {\ensuremath{\Struct{M}}},
-  description={An interpretation of a first-order language, consisting
-    of a \gls{sdomain} and assignments of the constant,
-    predicate and function symbols of the language (see
-    \olref[fol][syn][str]{sec})} }
+  description={对一阶语言的解释，由\gls{sdomain}以及对语言的常项、
+    谓词和函数符号的指派组成（参见
+    \olref[fol][syn][str]{sec}）} }
 
 \newglossaryentry{sdomain} {
-  name = {domain (of a structure)},
+  name = {论域（结构的）},
   symbol = {\ensuremath{\Domain{M}}},
-  description = {Non-empty set from from which a \gls{structure} takes
-    assignments and values of {variables} (see
-    \olref[fol][syn][str]{sec})} }
- 
+  description = {非空集合，\gls{structure} 从中获取指派和{变量}的{value}（参见
+    \olref[fol][syn][str]{sec}）} }
+
 \newglossaryentry{halting problem} {
-  name=halting problem,
-  description={The problem of determining (for any $e$, $n$) whether
-    the Turing machine~$M_e$ halts for an input of~$n$ strokes (see
-    \olref[tur][und][hal]{sec})} }
+  name=停机问题,
+  description={判定（对任意 $e$，$n$） Turing（图灵）机~$M_e$ 在输入~$n$ 个划痕时是否停机的问题（参见
+    \olref[tur][und][hal]{sec}）} }
 
 \newglossaryentry{bound} {
-  name=bound,
-  description={Occurrence of a variable
-    within the scope of a quantifier that uses the same
-    variable (see \olref[fol][syn][fvs]{sec})}
+  name=约束出现,
+  description={在同一变元的量词辖域内出现的该变元的出现
+    （参见 \olref[fol][syn][fvs]{sec}）}
 }
 
 \newglossaryentry{free} {
-  name=free,
-    description={An occurrence of a variable that is not \gls{bound}
-    (see \olref[fol][syn][fvs]{sec})}
+  name=自由出现,
+    description={不是\gls{bound}出现的变元出现
+    （参见 \olref[fol][syn][fvs]{sec}）}
 }
 
 \newglossaryentry{compactness theorem} {
-  name = {compactness theorem},  
-  description = {States that every \gls{finitely satisfiable} set of
-    sentences is satisfiable (see
-    \olref[fol][com][com]{sec})}}
+  name = {紧致性定理},
+  description = {断言：每个 \gls{finitely satisfiable} 语句集都是可满足的（参见
+    \olref[fol][com][com]{sec}）}}
 
 \newglossaryentry{ls}{
-  name = {L\"owenheim-Skolem Theorem},  
-  description = {States that every satisfiable set of sentences has a
-    countable model (see \olref[fol][com][dls]{sec})}}
+  name = {Löwenheim-Skolem（勒文海姆-斯科伦）定理},
+  description = {断言：每个可满足的语句集都有一个可数模型（参见 \olref[fol][com][dls]{sec}）}}
 
 \newglossaryentry{Church-Turing Theorem}{
-  name = {Church-Turing Theorem},
-  description = {States that there is no Turing machine which decides if a
-    given sentence of first-order logic is \gls{valid} or not (see
-    \olref[tur][und][uns]{sec})}}
+  name = {Church-Turing（邱奇-图灵）定理},
+  description = {断言：不存在能判定任意给定一阶逻辑语句是否\gls{valid}的 Turing（图灵）机（参见
+    \olref[tur][und][uns]{sec}）}}
 
 \newglossaryentry{decision problem}{
-  name = {decision problem}, 
-  description = {Problem of deciding if a given sentence of
-    first-order logic is \gls{valid} or not (see \gls{Church-Turing
-    Theorem})}}
+  name = {判定问题},
+  description = {判定给定一阶逻辑语句是否\gls{valid}的问题（参见 \gls{Church-Turing
+    Theorem}）}}
 
 \newglossaryentry{completeness-theorem}{
-  name = {completeness theorem},  
-  description = {States that first-order logic is complete: every
-    \gls{consistent} set of sentences is \gls{satisfiable}}}
-
-
+  name = {完备性定理},
+  description = {断言一阶逻辑是完备的：每个
+    \gls{consistent} 语句集都是 \gls{satisfiable} 的}}

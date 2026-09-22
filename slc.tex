@@ -3,7 +3,7 @@
 % driver file slc.tex to produce text
 
 \preto\OLEndChapterHook{\IfFileExists{include/summary-\thechapter}
-        {\section*{Summary}\addcontentsline{toc}{section}{Summary}
+        {\section*{摘要}\addcontentsline{toc}{section}{摘要}
         \let\emph\textbf\input{include/summary-\thechapter}\let\emph\textit}{}}
 
 \problemsperchapter
@@ -68,10 +68,10 @@
 \stopproblems
 \def\ifproblems#1{}
 
-\def\figurename{Fig.}
+\def\figurename{图}
 \setlength{\olphotowidth}{.45\textwidth}
 
-\chapter{Biographies}
+\chapter{传记}
 
 \olimport*[history/biographies]{georg-cantor}
 

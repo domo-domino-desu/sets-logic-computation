@@ -1,34 +1,3 @@
-A \emph{Turing machine} is a kind of idealized computation
-mechanism. It consists of a one-way infinite \emph{tape}, divided into
-squares, each of which can contain a \emph{symbol} from a
-pre-determined alphabet. The machine operates by moving a
-\emph{read-write head} along the tape. It may also be in one of a
-pre-determined number of \emph{states}. The actions of the read-write
-head are determined by a set of instructions; each instruction is
-conditional on the machine being in a certain state and reading a
-certain symbol, and specifies which symbol the machine will write onto
-the current square, whether it will move the read-write head one
-square left, right, or stay put, and which state it will switch to.
-If the tape contains a certain \emph{input}, represented as a sequence
-of symbols on the tape, and the machine is put into the designated
-start state with the read-write head reading the leftmost square of
-the input, the instruction set will step-wise determine a sequence of
-\emph{configurations} of the machine: content of tape, position of
-read-write head, and state of the machine. Should the machine
-encounter a configuration in which the instruction set does not
-contain an instruction for the current symbol read/state combination,
-the machine \emph{halts}, and the content of the tape is the
-\emph{output}.
+\emph{图灵机}是一种理想化的计算机制。它由一条单向无限的\emph{磁带}组成，磁带被划分为方格，每个方格可以包含预先确定的字母表中的某个\emph{符号}。机器通过沿磁带移动一个\emph{读写头}来运行。它还可以处于预先确定的若干\emph{状态}之一。读写头的动作由一组指令决定；每条指令都以机器处于某个特定状态并读取某个特定符号为条件，并指定机器将在当前方格写入哪个符号、将读写头向左或向右移动一格还是保持不动，以及它将切换到哪个状态。如果磁带上包含某个特定的\emph{输入}（表示为磁带上的符号序列），并且机器被置于指定的起始状态，同时读写头读取输入最左侧的方格，那么指令集将逐步决定机器的一系列\emph{格局}：磁带内容、读写头位置以及机器状态。一旦机器遇到某个格局，其中指令集不包含针对当前读取的符号与所处状态组合的指令，机器就\emph{停机}，此时磁带的内容即为\emph{输出}。
 
-Numbers can very easily be represented as sequences of strokes on the
-Tape of a Turing machine. We say a function $\Nat \to \Nat$ is
-\emph{Turing computable} if there is a Turing machine which, whenever
-it is started on the unary representation of~$n$ as input, eventually
-halts with its tape containing the unary representation of~$f(n)$ as
-output. Many familiar arithmetical functions are easily (or
-not-so-easily) shown to be Turing computable. Many other models of
-computation other than Turing machines have been proposed; and it has
-always turned out that the arithmetical functions computable there are
-also Turing computable. This is seen as support for the
-\emph{Church-Turing Thesis}, that every arithmetical function that can
-effectively be computed is Turing computable.
+数字可以非常容易地表示为图灵机磁带上的一列竖杠。如果存在一台图灵机，使得每当它以~$n$ 的一进制表示作为输入启动时，最终都会停机，并且其磁带上包含作为输出的~$f(n)$ 的一进制表示，我们就称函数 $\Nat \to \Nat$ 是\emph{图灵可计算的}。许多常见的算术函数都能被证明是图灵可计算的（有些容易，有些稍费周折）。人们还提出了许多图灵机以外的其他计算模型；而结果总是表明，这些模型上可计算的算术函数也是图灵可计算的。这被视为对\emph{Church-Turing论题}的支持，该论题断言：每个能有效计算的算术函数都是图灵可计算的。
