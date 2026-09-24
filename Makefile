@@ -14,7 +14,7 @@
 all: slc-screen.pdf slc-print.pdf slc-print-cover.pdf index.html
 
 %.pdf : %.tex olprevision.tex FORCE_MAKE
-	@if test -s "$(@:.pdf=.glo)"; then makeglossaries "$(@:.pdf=)"; fi
+	@if test -s "$(@:.pdf=.aux)" && test -s "$(@:.pdf=.glo)"; then makeglossaries "$(@:.pdf=)"; fi
 	latexmk -lualatex -dvi- -ps- $<
 	@if test -s "$(@:.pdf=.glo)"; then makeglossaries "$(@:.pdf=)"; latexmk -lualatex -dvi- -ps- $<; fi
 

@@ -1,8 +1,8 @@
-\Title{Sets, Logic, Computation: An Open Introduction to Metalogic}
+\Title{集合、逻辑与计算：元逻辑开放导论}
 \Author{Richard Zach\sep Open Logic Project}
-\Language{en-US}
-\Keywords{logic\sep first-order logic\sep set theory\sep
-Turing machines}
+\Language{zh-CN}
+\Keywords{逻辑\sep 一阶逻辑\sep 集合论\sep
+Turing机}
 \Copyright{CC BY 4.0}
 \PublicationType{book}
 \URLlink{https://slc.openlogicproject.org/}

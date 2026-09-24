@@ -15,6 +15,13 @@ git submodule update --remote --recursive OpenLogic
 git add OpenLogic
 ```
 
+The Chinese edition needs LuaLaTeX (the text is typeset with `ctex` and
+New Computer Modern), so build it with `make`, which runs
+`latexmk -lualatex`, rather than with `pdflatex`. Every push to
+`master` builds `slc-screen.pdf`, `slc-print.pdf` and
+`slc-print-cover.pdf` in GitHub Actions and attaches them to a
+[release](https://github.com/domo-domino-desu/sets-logic-computation/releases).
+
 [![Book Cover](https://slc.openlogicproject.org/slc.png)](https://slc.openlogicproject.org/slc-screen.pdf)
 
 _Sets, Logic, Computation_ is an introductory textbook on metalogic.
