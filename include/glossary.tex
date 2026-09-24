@@ -2,8 +2,8 @@
   name = {演绎定理},
   description = {将基于假设的语句的语义后承和可证性，与对应的条件句的语义后承和可证性联系起来的定理。
 在语义形式中（\olref[fol][syn][sem]{thm:sem-deduction}），它断言 $\Gamma \cup \{!A\} \Entails !B$ 当且仅当 $\Gamma \Entails !A \lif
-    !B$。 In the proof-theoretic form, it states that $\Gamma \cup
-   \{!A\} \Proves !B$ iff $\Gamma \Proves !A \lif !B$}}
+    !B$。在证明论形式中，它断言 $\Gamma \cup
+   \{!A\} \Proves !B$ 当且仅当 $\Gamma \Proves !A \lif !B$}}
 
 \newglossaryentry{set-extensionality} {
   name={外延性（集合的）},
@@ -106,7 +106,7 @@
 \newglossaryentry{range}{
   name = 值域,
   symbol = {\ensuremath{\ran{f}}},
-  description = {陪域中实际被 $f$ 输出的那些元素构成的子集；$\ran{f} = \Setabs{y \in B}{f(x) = y \text{ for some $x \in
+  description = {陪域中实际被 $f$ 输出的那些元素构成的子集；$\ran{f} = \Setabs{y \in B}{f(x) = y \text{ 对某个 $x \in
         A$}}$（参见 \olref[sfr][fun][bas]{sec})}}
 
 \newglossaryentry{graph} {
@@ -261,7 +261,7 @@
     \olref[fol][mat][int]{sec}）} }
 
 \newglossaryentry{derivability} {
-  name=derivability,
+  name=可推导性,
   symbol = {\ensuremath{\Gamma \Proves !A}},
   description={在相继式演算中，如果存在一个\gls{sequent} $\Gamma_0 \Sequent !A$ 的\gls{derivation}，其中 $\Gamma_0 \subseteq \Gamma$ 是~$\Gamma$ 中语句的有穷序列，则称 $!A$ 从~$\Gamma$ 是{可推导的}（参见
     \olref[fol][seq][ptn]{sec}）。
@@ -269,49 +269,49 @@
     \olref[fol][ntd][ptn]{sec}）} }
 
 \newglossaryentry{theorem} {
-  name={theorem},
+  name={定理},
   symbol = {\ensuremath{\Proves !A}},
   description={在相继式演算中，如果存在相继式 $\Sequent !A$ 的{推导}，则称{公式}~$!A$ 是（逻辑的）{定理}（参见 \olref[fol][seq][ptn]{sec}）。
 在自然演绎中，如果存在一个所有假设均被\gls{discharged}的 $!A$ 的{推导}，则称{公式}~$!A$ 是{定理}（参见 \olref[fol][ntd][ptn]{sec}）。
 我们也称 $!A$ 是理论~$\Gamma$ 的定理，如果 $\Gamma \Proves !A$} }
 
 \newglossaryentry{consistent} {
-  name=consistent,
+  name=一致的,
   description={在相继式演算中，语句集~$\Gamma$ 是{一致的}，当且仅当不存在以 $\Gamma_0 \subseteq \Gamma$ 为前提的\gls{sequent} $\Gamma_0 \Sequent \quad$ 的\gls{derivation}（参见 \olref[fol][seq][ptn]{sec}）。
 在自然演绎中，$\Gamma$ 是{一致的}，当且仅当 $\Gamma \Proves/ \lfalse$（参见 \olref[fol][ntd][ptn]{sec}）。
 如果 $\Gamma$ 不是一致的，则它是{不一致的}。} }
 
 \newglossaryentry{inconsistent} {
-  name=inconsistent,
+  name=不一致的,
   description = {参见\gls{consistent}}}
 
 \newglossaryentry{derivation} {
-  name=derivation,
+  name=推导,
   description={在相继式演算中，指一个相继式的树，其中每个相继式或者是初始相继式，或者由紧接其上方的相继式通过某条推理规则得到（参见 \olref[fol][seq][rul]{sec}）。
 在自然演绎中，指一个公式的树，其中每个公式或者是假设，或者由紧接其上方的公式通过某条推理规则得到（参见 \olref[fol][ntd][rul]{sec}）} }
 
 \newglossaryentry{eigenvariable}{
-  name = eigenvariable,
+  name = 特征变元,
   description = {在相继式演算中，指 $\LeftR{\lexists}$ 或 $\RightR{\lforall}$ 推理的前提中出现、但不得在结论中出现的一个特殊常项符号（参见
     \olref[fol][seq][rul]{sec}）。
 在自然演绎中，指 $\Elim{\lexists}$ 或 $\Intro{\lforall}$ 推理的前提中出现、但不得在结论或任何\gls{undischarged}假设中出现的一个特殊常项符号（参见
     \olref[fol][ntd][rul]{sec}）}}
 
 \newglossaryentry{discharged}{
-  name = {discharged},
+  name = {已解除的},
   description = {推导中的一个\gls{assumption}可以被其下方的某条推理规则{解除}（该规则与该假设会分配一个匹配的标签，例如 $[!A]^2$）。
 如果它未被解除，则称为{未解除的}（参见 \olref[fol][ntd][rul]{sec}）}}
 
 \newglossaryentry{undischarged}{
-  name = {undischarged},
+  name = {未解除的},
   description = {参见\gls{discharged}}}
 
 \newglossaryentry{assumption}{
-  name = {assumption},
+  name = {假设},
   description = {位于推导最顶端的公式，也称为初始公式。它可以是\gls{discharged}或未解除的（参见\olref[fol][ntd][rul]{sec}）}}
 
 \newglossaryentry{soundness} {
-  name=soundness,
+  name=可靠性,
   description={推导系统的性质：若每当
     $\Gamma \Proves !A$ 时都有 $\Gamma \Entails !A$，则它是可靠的（参见
     \olref[fol][seq][sou]{sec} 和 \olref[fol][ntd][sou]{sec}）} }
@@ -322,12 +322,12 @@
 
 \newglossaryentry{sentence} {
   name=语句,
-  description={不含\gls{free}变元的{formula}（参见
+  description={不含\gls{free}变元的\gls{formula}（参见
     \olref[fol][syn][fvs]{sec}）} }
 
 \newglossaryentry{variable assignment} {
   name=变元指派,
-  description={将每个{变量}映射到~$\Domain M$ 中一个元素的 \gls{function}（参见 \olref[fol][syn][sat]{sec}）} }
+  description={将每个{变元}映射到~$\Domain M$ 中一个元素的 \gls{function}（参见 \olref[fol][syn][sat]{sec}）} }
 
 \newglossaryentry{$x$-variant} {
   name=$x$-变体,
@@ -359,7 +359,7 @@
 
 \newglossaryentry{cs} {
     name=覆盖结构,
-    description={一个 \gls{structure}，其论域中每个元素都是某个闭{term}的{value}（参见
+    description={一个 \gls{structure}，其论域中每个元素都是某个闭项的值（参见
       \olref[fol][syn][str]{sec}）} }
 
 \newglossaryentry{subformula} {
@@ -380,7 +380,7 @@
 \newglossaryentry{completeness} {
   name=完备性,
   description={推导系统的性质；若每当
-    $\Gamma$ 语义上后承 $!A$ 时，都存在一个{derivation}可建立 $\Gamma \Proves !A$，则该系统是完备的；等价地说，当且仅当
+    $\Gamma$ 语义上后承 $!A$ 时，都存在一个\gls{derivation}可建立 $\Gamma \Proves !A$，则该系统是完备的；等价地说，当且仅当
     每个 \gls{consistent} 语句集都是 \gls{satisfiable} 的
     （参见 \olref[fol][com][int]{sec}）} }
 
@@ -399,7 +399,7 @@
 \newglossaryentry{sdomain} {
   name = {论域（结构的）},
   symbol = {\ensuremath{\Domain{M}}},
-  description = {非空集合，\gls{structure} 从中获取指派和{变量}的{value}（参见
+  description = {非空集合，\gls{structure} 从中获取指派和变元的值（参见
     \olref[fol][syn][str]{sec}）} }
 
 \newglossaryentry{halting problem} {
